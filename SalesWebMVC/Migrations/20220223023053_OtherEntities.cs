@@ -9,7 +9,7 @@ namespace SalesWebMVC.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Sellers",
+                name: "Seller",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -48,7 +48,7 @@ namespace SalesWebMVC.Migrations
                     table.ForeignKey(
                         name: "FK_SalesRecord_Sellers_SellerId",
                         column: x => x.SellerId,
-                        principalTable: "Sellers",
+                        principalTable: "Seller",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -60,7 +60,7 @@ namespace SalesWebMVC.Migrations
 
             migrationBuilder.CreateIndex(
                 name: "IX_Sellers_DepartmentId",
-                table: "Sellers",
+                table: "Seller",
                 column: "DepartmentId");
         }
 
@@ -70,7 +70,7 @@ namespace SalesWebMVC.Migrations
                 name: "SalesRecord");
 
             migrationBuilder.DropTable(
-                name: "Sellers");
+                name: "Seller");
         }
     }
 }
