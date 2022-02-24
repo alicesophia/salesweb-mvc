@@ -5,9 +5,18 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace SalesWebMVC.Controllers {
-    public class HomeController1 : Controller {
+    public class SalesRecordsController : Controller {
         public IActionResult Index() {
             return View();
         }
+
+        public IActionResult SimpleSearch() {
+            return View();
+        }
+
+        public IActionResult GroupingSearch() {
+            return View();
+        }
+
     }
 }
